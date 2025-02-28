@@ -333,7 +333,27 @@
       }
   }
 
+  html, body { height: 100%;}
 
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    flex: 1 0 auto; /* This is the key - it allows the content to grow but not shrink */
+    padding: 20px;
+}
+
+.footer {
+    flex-shrink: 0; /* Prevents the footer from shrinking */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    height:100px;
+}
 
 
   /***** Quiz *****/
