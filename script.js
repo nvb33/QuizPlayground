@@ -15,7 +15,9 @@ async function fetchQuizQuestions(category, difficulty, amount = 10) {
       return [];
     }
   }
-  
+
+
+        
   // 2. Quiz state management
   class QuizManager {
     constructor(questionsContainer, navigationContainer, progressContainer) {
@@ -363,3 +365,14 @@ async function fetchQuizQuestions(category, difficulty, amount = 10) {
       }
     });
   });
+
+
+  /****  Display Hamburger Menu  ****/
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  
