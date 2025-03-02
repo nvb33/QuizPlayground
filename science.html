@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BrainZap</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="description" content="">
+
+        <meta property="og:title" content="">
+        <meta property="og:type" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <meta property="og:image:alt" content="">
+
+        <link rel="icon" href="/favicon.ico" sizes="any">
+        <link rel="icon" href="/icon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="icon.png">
+
+        <link rel="manifest" href="site.webmanifest">
+        <meta name="theme-color" content="#fafafa">
+    </head>
+
+    <body>
+        <header>
+            <div class="logo"><a href="index.html"><img src="img/logo.jpg" alt="Logo" /><span class="name">BrainZap</span></a></div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="geography.html">Geography</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li class="active"><a href="#">Science</a></li>
+                    <li><a href="wordpuzzle.html">Word Puzzle</a></li>
+                </ul>
+                <div class="menu-toggle">☰</div>
+            </nav>
+        </header>
+
+        <div class="quiz-container content">
+            <div class="quiz-header">
+                <h2>Trivia Quiz</h2>
+                <div class="quiz-controls">
+                    <select id="category-select">
+                        <option value="9">General Knowledge</option>
+                        <option value="22">Geography</option>
+                        <option value="23">History</option>
+                        <option value="17">Science & Nature</option>
+                    </select>
+                    <select id="difficulty-select">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                    <button id="start-quiz">Start Quiz</button>
+                </div>
+            </div>
+            
+            <!-- Progress indicators will appear here -->
+            <div id="progress-container" class="progress-container"></div>
+            
+            <!-- Questions will appear here -->
+            <div id="questions-container" class="questions-container"></div>
+            
+            <!-- Navigation buttons will appear here -->
+            <div id="navigation-container" class="navigation-container"></div>
+        </div>
+
+        <footer>
+            <p>Whatever</p>
+        </footer>
+
+        <script src="js/script.js"></script>
+        <script src="js/hamburger.js"></script>
+    </body>
+</html>

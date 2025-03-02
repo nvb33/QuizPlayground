@@ -9,6 +9,7 @@
 	  font-size: 1em;
 	  line-height: 1.4;
     font-family: Roboto, sans-serif;
+    scroll-behavior: smooth;
 	}
 
 	/*
@@ -238,10 +239,12 @@
 		page-break-after: avoid;
 	  }
 	}
-
-  /***** BrainZap styles *****/
   
-  /***** Header *****/
+  /*
+   *
+   *  Homepage
+   * 
+   */
 
   body {
     max-width: 1200px;
@@ -270,7 +273,145 @@
     color: #333; 
   }
 
-  .navbar {
+  /* Hero section styles */
+  .hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://source.unsplash.com/random/1600x900/?landscape') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+}
+
+.scroll-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.scroll-btn:hover {
+    transform: translateY(-3px);
+    background-color: #45a049;
+}
+
+/* Animated down arrow */
+.scroll-arrow {
+    position: absolute;
+    bottom: 40px;
+    width: 30px;
+    height: 30px;
+    border-right: 4px solid white;
+    border-bottom: 4px solid white;
+    transform: rotate(45deg);
+    animation: arrow-bounce 2s infinite;
+    cursor: pointer;
+}
+
+@keyframes arrow-bounce {
+    0%, 100% {
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+    50% {
+        transform: rotate(45deg) translate(0, 0);
+    }
+}
+
+/* Full page navigation styles */
+.full-nav {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 80px 20px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.nav-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.nav-item p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.nav-item a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-item a:hover {
+    background-color: #45a049;
+}
+
+  html, body { height: 100%;}
+
+  body > footer {
+    position: sticky;
+    top: 100vh;
+  }
+
+  /*
+   *
+   *  Science Quiz Page
+   *
+   */
+
+   .navbar {
     background-color: #333;
     color: white;
     display: flex;
@@ -333,32 +474,7 @@
       }
   }
 
-  html, body { height: 100%;}
-
-  body {
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-}
-
-.content {
-    flex: 1 0 auto; /* This is the key - it allows the content to grow but not shrink */
-    padding: 20px;
-}
-
-.footer {
-    flex-shrink: 0; /* Prevents the footer from shrinking */
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    height:100px;
-}
-
-
-  /***** Quiz *****/
-
-  quiz-container {
+   quiz-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
