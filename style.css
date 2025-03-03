@@ -253,14 +253,19 @@
   /* Homepage Styles */
   
   header {
+    width: 100%;
+  }
+
+  .header-container {
     max-width: 1200px;
     width: 100%;
-    margin-top: 1em;
+    margin: 0 auto;
     max-height: 10em;
     padding: 1em 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+   
   }
 
   .logo a {
@@ -366,11 +371,7 @@
       }
   }
 
-  /*
-   *
-   *  Navigation styles for the homepage  
-   *
-   */
+  /* Navigation card styles for the homepage */
 
   .full-nav {
       min-height: 100vh;
@@ -442,19 +443,12 @@
     top: 100vh;
   }
 
-  /*
-   *
-   *  Science Quiz Page
-   *
-   */
+  /* Quiz page common styles including top navigation bar */
 
-   .navbar {
-    background-color: #333;
-    color: white;
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
     margin-top:1rem;
   }
 
@@ -464,11 +458,13 @@
   }
 
   .nav-links li {
-      padding: 0 1rem;
+      padding: 0 2rem;
   }
 
   .nav-links a {
-      color: white;
+      color: #333;
+      font-size: 1rem;
+      font-weight: 700;
       text-decoration: none;
       transition: color 0.3s ease;
   }
@@ -511,7 +507,9 @@
       }
   }
 
-   quiz-container {
+   
+
+  .quiz-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -716,4 +714,19 @@
   
   .restart-button:hover {
     background-color: #4cae4c;
+  }
+
+
+  .message {
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 10px 0;
+    display: none;
+  }
+  .success {
+    background-color: #4CAF50;
+  }
+  .warning {
+    background-color: #ff9800;
   }

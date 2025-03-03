@@ -24,24 +24,81 @@
 
     <body>
         <header>
-            <div class="logo"><a href="index.html"><img src="img/logo.jpg" alt="Logo" /><span class="name">BrainZap</span></a></div>
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="geography.html">Geography</a></li>
-                    <li><a href="history.html">History</a></li>
-                    <li><a href="science.html">Science</a></li>
-                    <li class="active"><a href="#">Word Puzzle</a></li>
-                </ul>
-                <div class="menu-toggle">☰</div>
-            </nav>
+             <div class="header-container">
+                <div class="logo"><a href="index.html"><img src="img/logo.jpg" alt="Logo" /><span class="name">BrainZap</span></a></div>
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="geography.html">Geography</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="science.html">Science</a></li>
+                        <li><a href="wordpuzzle.html"  class="active">Word Puzzle</a></li>
+                    </ul>
+                    <div class="menu-toggle">☰</div>
+                </nav>
+            </div>
         </header>
 
-        
+        <section class="quiz-container content">
+
+            <h1>Word Puzzle</h1>
+    
+            <div>
+                <div>
+                Score: <span id="score">0</span>
+                </div>
+                
+                <div>
+                Time: <span id="timer">120</span>s
+                </div>
+                
+                <div id="message" class="message"></div>
+                
+                <div id="word-container" style="min-height: 50px; border: 1px solid black; padding: 10px; margin: 10px 0;"></div>
+                
+                <div id="letter-container" style="margin: 10px 0;"></div>
+                
+                <div>
+                <button id="submit">Submit Word</button>
+                <button id="shuffle">Shuffle</button>
+                <button id="clear">Clear</button>
+                <button id="new-game">New Game</button>
+                </div>
+                
+                <div style="display: flex; margin-top: 20px;">
+                <div style="margin-right: 20px;">
+                    <h3>3-Letter</h3>
+                    <ul id="three-letter-words"></ul>
+                </div>
+                <div style="margin-right: 20px;">
+                    <h3>4-Letter</h3>
+                    <ul id="four-letter-words"></ul>
+                </div>
+                <div style="margin-right: 20px;">
+                    <h3>5-Letter</h3>
+                    <ul id="five-letter-words"></ul>
+                </div>
+                <div>
+                    <h3>6-Letter</h3>
+                    <ul id="six-letter-words"></ul>
+                </div>
+                </div>
+            </div>
+            
+            <div id="game-over-modal" style="display: none;">
+                <div>
+                <h2>Game Over!</h2>
+                <p>Your final score: <span id="final-score">0</span></p>
+                <p>Words found: <span id="words-found">0</span>/<span id="total-words">0</span></p>
+                <button id="play-again">Play Again</button>
+                </div>
+            </div>
+
+        <section>
 
         <footer>
             <p>Whatever</p>
         </footer>
 
-        <script src=""></script>
+        <script src="js/puzzle.js"></script>
     </body>
 </html>
