@@ -1,7 +1,7 @@
-async function fetchQuizQuestions(category, difficulty, amount = 10) {
+async function fetchQuizQuestions(difficulty, amount = 10) {
     try {
       // Using Open Trivia Database as an example API
-      const url = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
+      const url = `https://opentdb.com/api.php?amount=${amount}&category=17&difficulty=${difficulty}&type=multiple`;
       const response = await fetch(url);
       const data = await response.json();
       
