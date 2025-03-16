@@ -333,7 +333,6 @@ async function fetchQuizQuestions(difficulty, amount = 10) {
     );
     
     startButton.addEventListener('click', async () => {
-      const category = document.getElementById('category-select').value;
       const difficulty = document.getElementById('difficulty-select').value;
       
       // Show loading state
@@ -345,7 +344,7 @@ async function fetchQuizQuestions(difficulty, amount = 10) {
       document.querySelector('.quiz-controls').style.display = 'none';
       
       // Fetch and display questions
-      const questions = await fetchQuizQuestions(category, difficulty);
+      const questions = await fetchQuizQuestions(difficulty);
       
       if (questions.length > 0) {
         quizManager.loadQuestions(questions);
